@@ -84,13 +84,34 @@ const NavBar = () => {
             </div>
             {mobileDrawerOpen && (
                 <div className="fixed left-0 z-20 bg-white w-[50vw] p-12 flex flex-col lg:hidden text-black border mt-[11px] background-blur-lg">
-                    <ul className='flex flex-col gap-8 '>
+                    <div  className='flex flex-col gap-8'>
+
+                        <Link  to="/membership"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                BECOM A MEMBER 
+                            </span>
+                        </Link>
+                        <Link  to="/shop"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                SHOP 
+                            </span>
+                        </Link>
+                        <Link to="/contact"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                CONTACT 
+                            </span>
+                        </Link>
+                    </div>
+                    {/* <ul className='flex flex-col gap-8 '>
                         {navItems.map((data, index) => (
                             <li className='hover:underline transition duration-200 ease-in-out font-bold' key={index}>
                                 <a href={data.href}> {data.label}</a>
                             </li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
             )}     
         </div>
