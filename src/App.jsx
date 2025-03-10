@@ -1,10 +1,12 @@
 import { useState } from 'react'
-
 import NavBar from './components/NavBar'
-import Hero from './components/Hero'
-import Sambasec from './components/Sambasec'
-import Nikesec from './components/Nikesec'
 import Footer from './components/Footer'
+import { Routes, Route } from 'react-router'
+import Home from './routes/Home'
+import Membership from './routes/Membership'
+import Shop from './routes/Shop'
+import Contact from './routes/contact'
+import Lookbook from './routes/Lookbook'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +14,13 @@ function App() {
   return (
     <div >
       <NavBar />
-      <Hero />
-      <Sambasec />
-      <Nikesec />
+      <Routes>
+        <Route path='/' element = {<Home />} />
+        <Route path='/membership' element = {<Membership />} />
+        <Route path='/shop' element = {<Shop />} />
+        <Route path='/contact' element = {<Contact/>} />
+        <Route path='/lookbook' element = {<Lookbook/>} />
+      </Routes>
       <Footer />
     </div>
   )

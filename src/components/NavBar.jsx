@@ -4,6 +4,7 @@ import { Search } from 'lucide-react';
 import { Menu, X } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 import logo from "../assets/logo.svg"
+import { Link } from 'react-router-dom';
 
 
 const navItems = [
@@ -42,16 +43,40 @@ const NavBar = () => {
                     </div>
                 </div>
                 <div>
-                    <img className='w-20' src={logo} alt="logo" />
+                    <Link to= "/">
+                        <img className='w-20' src={logo} alt="logo" />
+                    </Link>
                 </div>
                 <div className='hidden lg:flex gap-4 items-center'>
-                    <ul className='flex gap-8'>
+                    <div className='flex gap-8'>
+                        <Link  to="/membership"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                BECOM A MEMBER 
+                            </span>
+                        </Link>
+                        <Link  to="/shop"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                SHOP 
+                            </span>
+                        </Link>
+                        <Link to="/contact"
+                         className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold '>
+                            <span>
+                                CONTACT 
+                            </span>
+                        </Link>
+                    </div>
+
+                    {/* <ul className='flex gap-8'>
                     {navItems.map((data,index) => (
                         <li className='text-xs hover:underline transition hover:duration-200 ease-in-out hover:font-bold ' key={index}>
+                        
                             <a href={data.href} className=''>{data.label}</a>
                         </li>
                     ))}
-                    </ul>
+                    </ul> */}
                     <button className='cursor-pointer'>
                     <ShoppingCart />
                     </button>

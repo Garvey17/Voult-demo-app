@@ -1,16 +1,21 @@
 import React from 'react'
 import logo from "../assets/logo.svg"
+import { Link } from 'react-router'
 
 const Footer = () => {
   return (
-    <div class="w-full min-h-[50vh] flex items-center justify-center bg-gray-400 mt-20 font-Montserat">
+    <div class="w-full min-h-[50vh] flex items-center justify-center bg-gray-400  font-Montserat">
         <div class="md:w-2/3 w-full px-4 text-white flex flex-col">
             <div class="w-full flex justify-center gap-8 items-center mt-20">
                 <div class="">
                     <img src={logo} alt="" className='w-[50vw]'/>    
                 </div>
                 <div class="w-44 pt-6 md:pt-0">
-                    <a class="bg-white text-black justify-center text-center rounded-full shadow px-5 py-3 flex items-center cursor-pointer hover:shadow-xl transition duration-200">Contact US</a>
+                    <Link to="/contact"
+                    className="bg-white text-black justify-center text-center rounded-full shadow px-5 py-3 flex items-center cursor-pointer hover:shadow-xl transition duration-200">
+                        Contact US
+                    </Link>
+                    
                 </div>
             </div>
             <div class="flex flex-col md:flex-row md:justify-between">
