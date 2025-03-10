@@ -5,7 +5,7 @@ import { Routes, Route } from 'react-router'
 import Home from './routes/Home'
 import Membership from './routes/Membership'
 import Shop from './routes/Shop'
-import Contact from './routes/contact'
+import Contact from './routes/Contact'
 import Lookbook from './routes/Lookbook'
 
 function App() {
