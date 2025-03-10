@@ -50,15 +50,26 @@ const Lookbook = () => {
             </Link>
 
         </div>
-        <div className='flex flex-col gap-8'>
-            <img src={inspired} alt="" />
-            <div className='flex gap-8 justify-center items-center'>
-                <img src={nikeLogo} alt="" />
-                <img src={adidas} alt="" />
-                <img src={supreme} alt="" />
-                <img src={uniqlo} alt="" />
-            </div>
-        </div>
+        <div className='flex flex-col justify-center items-center mb-10'>
+                    <img src={inspired} alt="" />
+                    <div className='flex justify-around gap-10 '>
+                        <a href="" className='hover:shadow-lg transition duration-200'>
+                            <img src={uniqlo} alt="" />
+                        </a>
+                        <a href="" className='hover:shadow-lg transition duration-200'>
+                            <img src={hilfiger} alt="" />
+                        </a>
+                        <a href="" className='hover:shadow-lg transition duration-200'>
+                            <img src={supreme} alt="" />
+                        </a>
+                        <a href="" className='hover:shadow-lg transition duration-200'>
+                            <img src={adidas} alt="" />
+                        </a>
+                        <a href="" className='hover:shadow-lg transition duration-200'>
+                            <img src={nikeLogo} alt="" />
+                        </a>
+                    </div>
+                </div>
 
     </div>
   )
