@@ -23,7 +23,7 @@ const Footer = () => {
                 
             </div>
             <div class="flex flex-col">
-                <div class="flex mt-24 mb-12 flex-row justify-between">
+                <div class="flex mb-4 flex-row justify-between">
                     
                     <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition duration-200">About</a>
                     <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase transition duration-200">Services</a>
@@ -50,7 +50,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr class="border-gray-600"/>
-                <p class="w-full text-center my-12 text-gray-600">Copyright © 2025 Voult fashion group</p>
+                <p class="w-full text-center my-12 text-gray-600 text-xs">Copyright © 2025 Voult fashion group</p>
             </div>
         </div>
     </div>

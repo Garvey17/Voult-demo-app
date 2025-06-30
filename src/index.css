@@ -1,8 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
-:root {
-  font-family: "Montserrat", "Rammetto One", "Climate Crisis", sans-serif;
+@theme {
+  --font-montserrat: Montserrat, "sans-serif";
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
   
+  .abs-center {
+    @apply absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
 }
