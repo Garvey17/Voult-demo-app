@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 
 const Hero = () => {
   return (
-    <div style={{ backgroundImage: `url(${hero})` }} className='flex flex-col justify-center  items-center h-[70vh] md:h-dvh w-screen overflow-hidden bg-center bg-cover bg-no-repeat mb-8'>
+    <div style={{ backgroundImage: `url(${hero})` }} className='flex flex-col justify-center  items-center h-[70vh] md:h-dvh  overflow-x-hidden bg-center bg-cover bg-no-repeat mb-8'>
         {/* <img src={hero} alt="" className=' object-fill' /> */}
         <div className='flex items-center flex-col gap-4 pt-8 d:mt-60 mt-40'>
           <div>

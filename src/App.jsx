@@ -7,6 +7,9 @@ import Membership from './routes/Membership'
 import Shop from './routes/Shop'
 import Contact from './routes/Contact'
 import Lookbook from './routes/Lookbook'
+import Partners from './components/Partners'
+import Cart from './routes/Cart'
+import Admin from "./routes/Admin"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +23,8 @@ function App() {
         <Route path='/shop' element = {<Shop />} />
         <Route path='/contact' element = {<Contact/>} />
         <Route path='/lookbook' element = {<Lookbook/>} />
+        <Route path='/cart' element = {<Cart/>} />
+        <Route path='/admin' element = {<Admin/>} />
       </Routes>
       <Footer />
     </div>

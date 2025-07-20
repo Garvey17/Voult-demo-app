@@ -4,7 +4,7 @@ import { useCartStore } from '../store/cartStore';
 const CartComponent = () => {
   const { 
     items, 
-     
+    totalPrice, 
     addItem, 
     removeItem, 
     updateQuantity, 
@@ -12,22 +12,22 @@ const CartComponent = () => {
   } = useCartStore();
 
   const totalItems = useCartStore(state => state.getTotalItems());
-   const totalPrice = useCartStore(state => state.getTotalPrice())
+  console.log(totalItems);
   
 
   return (
-    <div className='min-h-screen flex justify-center items-center h-auto'>
+    <div className=''>
 
-        <div className="cart flex flex-col justify-center items-center my-4 gap-3">
+        <div className="cart p-10 bg-white rounded-2xl flex flex-col justify-center items-center min-w-1xl h-[50vh] overflow-y-scroll">
             <h2 className='font-montserrat font-bold text-xl'>Your Cart</h2>
             
             {items.length === 0 ? (
                 <p>Your cart is empty</p>
             ) : (
                 <>
-                <ul className="cart-items flex flex-col gap-6">
+                <ul className="cart-items">
                     {items.map(item => (
-                    <li key={item.id} className="cart-item bg-gray-300 px-6 py-3 rounded-2xl w-auto">
+                    <li key={item.id} className="cart-item">
                         <div className="item-info flex items-center gap-4">
                             <div className='w-20 '>
                                 <img className='rounded-2xl' src={item.image} alt="" />
@@ -38,21 +38,21 @@ const CartComponent = () => {
                             </div>
                         </div>
                         
-                        <div className="item-controls flex gap-4 justify-center items-center text-sm md:text-md font-medium font-montserrat">
-                            <span>Quantity: {""}</span>
+                        <div className="item-controls flex">
                             <div>
+                                <span>Quantity: {""}</span>
                                 <input
                                     type="number"
                                     min="1"
                                     value={item.quantity}
                                     onChange={(e) => updateQuantity(item.id, parseInt(e.target.value) || 1)}
-                                    className="quantity-input border-2 rounded-lg px-2 w-[100px]"
+                                    className="quantity-input"
                                 />
                             </div>
                         
                         <button 
                             onClick={() => removeItem(item.id)}
-                            className="remove-btn bg-red-900 p-2 rounded-2xl font-bold font-montserrat text-xs md:text-sm cursor-pointer"
+                            className="remove-btn bg-red-500 p-2 rounded-2xl"
                         >
                             Remove
                         </button>
@@ -61,15 +61,15 @@ const CartComponent = () => {
                     ))}
                 </ul>
                 
-                <div className="cart-summary flex flex-col gap-3 mt-6">
-                    <p className="total font-montserrat font-bold">Total: {" "}${totalPrice.toFixed(2)}</p>
-                    <div className="cart-actions flex justify-center items-center gap-10 md:gap-40">
-                      <button onClick={clearCart} className="clear-btn bg-[#2fc2f8] p-2 rounded-2xl font-bold font-montserrat text-xs md:text-sm cursor-pointer">
-                          Clear Cart
-                      </button>
-                      <button className="checkout-btn p-2 rounded-2xl bg-[#1C2E34] font-bold font-montserrat text-xs md:text-sm text-white cursor-pointer">
-                          Proceed to Checkout
-                      </button>
+                <div className="cart-summary">
+                    <p className="total">Total: ${totalPrice.toFixed(2)}</p>
+                    <div className="cart-actions">
+                    <button onClick={clearCart} className="clear-btn">
+                        Clear Cart
+                    </button>
+                    <button className="checkout-btn">
+                        Proceed to Checkout
+                    </button>
                     </div>
                 </div>
                 </>

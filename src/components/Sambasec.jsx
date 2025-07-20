@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 const Sambasec = () => {
   return (
-    <div style={{ backgroundImage: `url(${midhero})` }} className='flex flex-col justify-center  items-center h-[70vh] md:h-dvh w-screen overflow-hidden bg-center bg-cover bg-no-repeat mb-8'>
+    <div style={{ backgroundImage: `url(${midhero})` }} className='flex flex-col justify-center  items-center h-[70vh] md:h-dvh  overflow-x-hidden bg-center bg-cover bg-no-repeat mb-8'>
       <div className='flex items-center flex-col gap-4 pt-8 md:mt-60 mt-40'>
       <div className=''>
         <h1 className='font-montserrat font-bold text-3xl md:text-5xl text-white text-center'>SAMBA FEVER</h1>
